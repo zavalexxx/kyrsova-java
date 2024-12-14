@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/eschool
+    username: postgres
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: loqli2vTEM8xuzCzsyXCux6S80lREjZK
+            client-secret: CYyZLrBENNIXxKcLembHg-_8mYxobDy5R2EWhgl1HLSUggKO4iPMGW0OF1fxMg9y
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+         auth0:
+          issuer-uri: https://dev-lmuhbnku50474yzl.eu.auth0.com/
+
+okta:
+  oauth2:
+    audience: https://api
+    issuer: https://dev-lmuhbnku50474yzl.eu.auth0.com/
